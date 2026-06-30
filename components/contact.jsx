@@ -147,11 +147,11 @@ export default function Contact() {
                     <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                       <Mail className="w-5 h-5 text-primary" />
                     </div>
-                    <span className="text-sm">alex@example.com</span>
+                    <span className="text-sm">adibmahi14@gmail.com</span>
                   </a>
 
                   <a
-                    href="https://linkedin.com"
+                    href="https://www.linkedin.com/in/adib-mahi-99386a417/"
                     className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors"
                   >
                     <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
@@ -161,7 +161,7 @@ export default function Contact() {
                   </a>
 
                   <a
-                    href="https://github.com"
+                    href="https://github.com/Mahii-11"
                     className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors"
                   >
                     <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">

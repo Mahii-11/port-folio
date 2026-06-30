@@ -39,11 +39,11 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 text-balance"
         >
-          I Build{" "}
-          <span className="text-gradient">High-Performance</span>
+          Building {" "}
+          <span className="text-gradient">Modern Responsive</span>
           <br />
-          Web Experiences That{" "}
-          <span className="text-gradient">Convert</span>
+          Web Experiences {" "}
+        <span className="text-gradient">That Inspire</span> 
         </motion.h1>
 
         <motion.p
@@ -52,8 +52,8 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 text-pretty"
         >
-          Senior Frontend Developer specializing in React, TypeScript, and modern web technologies. 
-          I transform complex problems into elegant, performant solutions.
+          Frontend Developer crafting responsive, user-focused,
+          and high-performance web applications with React and modern web technologies.
         </motion.p>
 
         <motion.div
@@ -85,13 +85,13 @@ export default function Hero() {
           className="mt-16 flex flex-wrap items-center justify-center gap-8 text-muted-foreground"
         >
           <div className="flex items-center gap-2">
-            <span className="text-2xl font-bold text-foreground">5+</span>
-            <span className="text-sm">Years Experience</span>
+            <span className="text-2xl font-bold text-foreground">8+ Months</span>
+            <span className="text-sm">Professional Experience</span>
           </div>
           <div className="w-px h-8 bg-border" />
           <div className="flex items-center gap-2">
-            <span className="text-2xl font-bold text-foreground">50+</span>
-            <span className="text-sm">Projects Delivered</span>
+            <span className="text-2xl font-bold text-foreground">12+</span>
+            <span className="text-sm">Completed Projects</span>
           </div>
           <div className="w-px h-8 bg-border hidden sm:block" />
           <div className="flex items-center gap-2">

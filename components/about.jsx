@@ -10,31 +10,35 @@ const highlights = [
   {
     icon: Code2,
     title: "Clean Code",
-    description: "Writing maintainable, scalable code that teams love to work with."
+    description:
+      "Building reusable, maintainable, and scalable frontend solutions."
   },
   {
     icon: Users,
-    title: "Team Player",
-    description: "Collaborating effectively with designers, PMs, and backend engineers."
+    title: "Collaboration",
+    description:
+      "Collaborating with backend developers to deliver dynamic and reliable web applications."
   },
   {
     icon: Zap,
     title: "Performance",
-    description: "Optimizing for speed, accessibility, and exceptional user experience."
+    description:
+      "Delivering fast, responsive, and optimized user experiences."
   },
   {
     icon: Layers,
-    title: "Architecture",
-    description: "Designing robust frontend architectures that scale with your business."
+    title: "Modern Development",
+    description:
+      "Developing dynamic web applications using modern frontend technologies and best practices."
   }
-]
+];
 
 export default function About() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section id="about" className="py-24 relative">
+    <section id="about" className="py-16 relative">
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           ref={ref}
@@ -72,24 +76,24 @@ export default function About() {
 
             <span className="text-primary font-mono text-sm">// ABOUT ME</span>
             <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-6">
-              Senior Frontend Engineer with a passion for{" "}
-              <span className="text-gradient">crafting experiences</span>
+              Frontend Developer Building Modern{" "}
+              <span className="text-gradient"> Web Experiences</span>
             </h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                With over 5 years of production experience, I specialize in building 
-                high-performance web applications that users love. My expertise lies 
-                in React ecosystems, TypeScript, and modern frontend architecture.
+                I'm a Frontend Developer passionate about creating responsive, dynamic,
+                and user-focused web applications with React.js and modern frontend technologies.
               </p>
               <p>
-                I&apos;ve worked with startups and enterprises alike, helping teams ship 
-                faster while maintaining code quality. From complex dashboards to 
-                e-commerce platforms, I bring a problem-solving mindset and attention 
-                to detail to every project.
+                Currently, I work remotely at Banglatech Solution,
+                where I develop modern user interfaces, integrate APIs, and build scalable frontend solutions
+                with a strong focus on clean code, performance, and user experience.
               </p>
               <p>
-                When I&apos;m not coding, you&apos;ll find me exploring new technologies, 
-                contributing to open source, or mentoring junior developers.
+                I enjoy solving real-world problems, learning new technologies,
+                and continuously improving my skills.
+                I also leverage modern AI tools to accelerate development, enhance UI implementation,
+                and debug efficiently while ensuring I understand every solution I deliver.
               </p>
             </div>
           </div>

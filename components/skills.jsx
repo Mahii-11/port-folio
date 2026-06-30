@@ -5,44 +5,43 @@ import { useRef } from "react"
 
 const skillCategories = [
   {
-    title: "Frontend",
+    title: "Frontend Development",
     skills: [
-      { name: "React", level: 95 },
-      { name: "TypeScript", level: 90 },
-      { name: "Next.js", level: 88 },
-      { name: "JavaScript", level: 95 },
-      { name: "Vue.js", level: 75 },
-    ]
+      { name: "React.js", level: 88 },
+      { name: "JavaScript (ES6+)", level: 87 },
+      { name: "JSX", level: 90 },
+      { name: "HTML5", level: 90 },
+      { name: "CSS3", level: 88 },
+    ],
   },
   {
-    title: "Styling",
+    title: "UI Engineering",
     skills: [
-      { name: "Tailwind CSS", level: 92 },
-      { name: "CSS/SCSS", level: 90 },
-      { name: "Framer Motion", level: 85 },
-      { name: "Styled Components", level: 80 },
-    ]
+      { name: "Tailwind CSS", level: 90 },
+      { name: "Responsive Web Design", level: 92 },
+      { name: "Motion for React", level: 80 },
+      { name: "Reusable Components", level: 88 },
+    ],
   },
   {
-    title: "Tools & APIs",
+    title: "Development Workflow",
     skills: [
-      { name: "Git/GitHub", level: 90 },
-      { name: "REST APIs", level: 92 },
-      { name: "GraphQL", level: 78 },
-      { name: "Figma", level: 85 },
-      { name: "Webpack/Vite", level: 82 },
-    ]
+      { name: "REST API Integration", level: 90 },
+      { name: "Vite", level: 90 },
+      { name: "Git", level: 82 },
+      { name: "GitHub", level: 82 },
+    ],
   },
   {
-    title: "Testing & DevOps",
+    title: "Professional Skills",
     skills: [
-      { name: "Jest", level: 85 },
-      { name: "Cypress", level: 80 },
-      { name: "CI/CD", level: 78 },
-      { name: "Docker", level: 70 },
-    ]
-  }
-]
+      { name: "Problem Solving", level: 88 },
+      { name: "Team Collaboration", level: 82 },
+      { name: "Code Quality", level: 87 },
+      { name: "Continuous Learning", level: 95 },
+    ],
+  },
+];
 
 export default function Skills() {
   const ref = useRef(null)
@@ -82,14 +81,13 @@ export default function Skills() {
                     <div key={skill.name}>
                       <div className="flex justify-between items-center mb-2">
                         <span className="text-sm font-medium">{skill.name}</span>
-                        <span className="text-xs text-muted-foreground">{skill.level}%</span>
                       </div>
                       <div className="h-2 bg-muted rounded-full overflow-hidden">
                         <motion.div
                           initial={{ width: 0 }}
                           animate={isInView ? { width: `${skill.level}%` } : {}}
                           transition={{ duration: 1, delay: catIndex * 0.1 + skillIndex * 0.05 }}
-                          className="h-full rounded-full bg-gradient-to-r from-primary to-accent"
+                          className="h-full rounded-full bg-linear-to-r from-primary to-accent"
                         />
                       </div>
                     </div>
@@ -106,7 +104,18 @@ export default function Skills() {
             transition={{ duration: 0.5, delay: 0.5 }}
             className="mt-12 flex flex-wrap justify-center gap-3"
           >
-            {["React", "TypeScript", "Next.js", "Tailwind", "Node.js", "GraphQL", "REST APIs", "Git", "Figma", "Jest"].map((skill) => (
+            {[
+                 "React.js",
+                 "JavaScript",
+                 "Vite",
+                 "Tailwind CSS",
+                 "HTML5",
+                 "CSS3",
+                 "Motion",
+                 "REST APIs",
+                 "Git",
+                 "GitHub"
+            ].map((skill) => (
               <span
                 key={skill}
                 className="px-4 py-2 rounded-full glass text-sm font-medium hover:glow-primary transition-all cursor-default"

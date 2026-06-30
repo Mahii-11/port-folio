@@ -6,45 +6,78 @@ import { Briefcase, MapPin } from "lucide-react"
 
 const experiences = [
   {
-    role: "Senior Frontend Developer",
-    company: "TechCorp Solutions",
-    location: "San Francisco, CA (Remote)",
-    period: "2022 - Present",
-    description: "Leading frontend development for enterprise SaaS products serving 50K+ users. Architected micro-frontend infrastructure that improved deployment frequency by 300%.",
-    achievements: [
-      "Reduced page load time by 60% through code splitting and lazy loading",
-      "Led team of 4 developers, mentoring juniors and conducting code reviews",
-      "Implemented design system adopted across 3 product teams"
-    ],
-    tech: ["React", "TypeScript", "Next.js", "GraphQL", "Tailwind CSS"]
-  },
-  {
     role: "Frontend Developer",
-    company: "Digital Agency Pro",
-    location: "New York, NY",
-    period: "2020 - 2022",
-    description: "Built responsive web applications for clients across fintech, healthcare, and e-commerce sectors. Delivered 15+ projects on time and within budget.",
+    company: "Banglatech Solution",
+    location: "Remote • Bangladesh",
+    period: "Nov 2025 – Present",
+    description:
+      "Building modern, responsive, and dynamic web applications using React.js while collaborating with backend developers to deliver production-ready features.",
+
     achievements: [
-      "Developed e-commerce platform handling $2M+ monthly transactions",
-      "Created reusable component library reducing development time by 40%",
-      "Integrated complex REST APIs and payment gateways"
-    ],
-    tech: ["React", "JavaScript", "Redux", "SCSS", "REST APIs"]
+  "Delivered multiple production-ready web applications, including e-commerce, portfolio, and business websites.",
+  "Developed responsive and dynamic user interfaces using React.js, Vite, and Tailwind CSS.",
+  "Integrated REST APIs to build scalable, data-driven web applications.",
+  "Contributed to large-scale platforms such as blood donation, charity, and news management systems.",
+  "Built reusable components, implemented skeleton loading, and created smooth user interactions to enhance user experience.",
+  "Collaborated closely with backend developers to deliver reliable and maintainable frontend solutions."
+],
+    tech: [
+      "React.js",
+      "JavaScript",
+      "Vite",
+      "Tailwind CSS",
+      "REST APIs",
+      "Motion",
+      "Git",
+      "GitHub"
+    ]
   },
+
   {
-    role: "Junior Frontend Developer",
-    company: "StartupHub Inc",
-    location: "Austin, TX",
-    period: "2019 - 2020",
-    description: "Contributed to early-stage startup building analytics dashboard. Grew from junior to mid-level within 12 months.",
+    role: "Frontend Development Journey",
+    company: "Self-Learning & Personal Projects",
+    location: "Remote",
+    period: "2024 – 2025",
+    description:
+      "Built a strong frontend foundation through consistent practice, real-world projects, and modern web development.",
+
     achievements: [
-      "Built interactive data visualization components with D3.js",
-      "Improved test coverage from 30% to 85%",
-      "Collaborated closely with UX team to implement pixel-perfect designs"
+      "Built multiple responsive React projects.",
+      "Learned component-based architecture and state management.",
+      "Worked with REST APIs and dynamic data rendering.",
+      "Focused on clean UI, reusable components, and performance."
     ],
-    tech: ["React", "D3.js", "JavaScript", "CSS", "Jest"]
+
+    tech: [
+      "React.js",
+      "JavaScript",
+      "Vite",
+      "Tailwind CSS",
+      "REST APIs"
+    ]
+  },
+
+  {
+    role: "Started Web Development",
+    company: "Learning Journey",
+    location: "Online",
+    period: "Sept -2024",
+    description:
+      "Began my journey into frontend development with a passion for creating modern web experiences.",
+
+    achievements: [
+      "Learned HTML, CSS, and modern JavaScript.",
+      "Built small projects to strengthen problem-solving skills.",
+      "Established a solid foundation for React development."
+    ],
+
+    tech: [
+      "HTML5",
+      "CSS3",
+      "JavaScript"
+    ]
   }
-]
+];
 
 export default function Experience() {
   const ref = useRef(null)
@@ -60,15 +93,14 @@ export default function Experience() {
           transition={{ duration: 0.6 }}
         >
           <div className="text-center mb-16">
-            <span className="text-primary font-mono text-sm">// EXPERIENCE</span>
-            <h2 className="text-3xl md:text-4xl font-bold mt-2">
-              Where I&apos;ve Worked
-            </h2>
-            <p className="text-muted-foreground mt-4">
-              5+ years of professional experience building web applications
-            </p>
-          </div>
-
+             <span className="text-primary font-mono text-sm">// EXPERIENCE</span>
+             <h2 className="text-3xl md:text-4xl font-bold mt-2">
+                  Professional Experience
+             </h2>
+           <p className="text-muted-foreground mt-4">
+               Contributing to production-ready web applications and delivering modern frontend solutions.
+           </p>
+           </div>
           {/* Timeline */}
           <div className="relative">
             {/* Timeline line */}
