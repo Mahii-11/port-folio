@@ -6,27 +6,10 @@ const geist = Geist({ subsets: ['latin'] })
 const geistMono = Geist_Mono({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Alex Chen | Senior Frontend Developer',
+  title: 'Adib Mahi | Frontend Developer',
   description:
-    'Senior Frontend Developer with 5+ years of experience building high-performance web applications. Expert in React, TypeScript, and modern web technologies.',
-  generator: 'v0.app',
-  icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
-  },
+    'Frontend Developer specializing in React.js, Vite, JavaScript, and Tailwind CSS. Building modern, responsive, and user-focused web applications with clean code and scalable solutions.',
+
 }
 
 export default function RootLayout({ children }) {
