@@ -10,6 +10,12 @@ export const metadata = {
   title: 'Adib Mahi | Frontend Developer',
   description:
     'Frontend Developer specializing in React.js, Vite, JavaScript, and Tailwind CSS. Building modern, responsive, and user-focused web applications with clean code and scalable solutions.',
+  
+   icons: {
+    icon: '/logo.png',
+    shortcut: '/logo.png',
+    apple: '/logo.png',
+  },
 
 }
 

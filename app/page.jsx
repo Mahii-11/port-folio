@@ -7,6 +7,8 @@ import Projects from '@/components/projects'
 import Testimonials from '@/components/testimonials'
 import Contact from '@/components/contact'
 import Footer from '@/components/footer'
+import EcomProject from '../components/EcomProject'
+import DonationPlatforms from '../components/DonationPlatforms'
 export default function Home() {
   return (
     <main className="relative overflow-hidden">
@@ -16,6 +18,8 @@ export default function Home() {
       <Skills />
       <Experience />
       <Projects />
+      <EcomProject />
+      <DonationPlatforms/>
       <Testimonials />
       <Contact />
       <Footer />

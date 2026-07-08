@@ -48,7 +48,7 @@ export default function Skills() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section id="skills" className="py-24 relative">
+    <section id="skills" className="-mt-5 relative">
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           ref={ref}

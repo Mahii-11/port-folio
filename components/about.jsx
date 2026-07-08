@@ -99,20 +99,25 @@ export default function About() {
           </div>
 
           {/* Right side - Highlight cards */}
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {highlights.map((item, index) => (
               <motion.div
                 key={item.title}
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group p-6 rounded-2xl glass noise hover:glow-primary transition-all duration-300"
+                className="group p-5 sm:p-6 rounded-2xl glass noise hover:glow-primary transition-all duration-300"
               >
                 <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
                   <item.icon className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className="font-semibold mb-2">{item.title}</h3>
-                <p className="text-sm text-muted-foreground">{item.description}</p>
+                <h3 className="text-base sm:text-lg font-semibold mb-2">
+                   {item.title}
+                 </h3>
+
+              <p className="text-sm sm:text-base text-muted-foreground leading-7">
+                  {item.description}
+               </p>
               </motion.div>
             ))}
           </div>

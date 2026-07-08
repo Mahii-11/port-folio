@@ -1,9 +1,16 @@
 "use client"
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Autoplay, A11y } from "swiper/modules";
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
-import { ExternalLink, Github, Star } from "lucide-react"
+import { ChevronLeft, ChevronRight, ExternalLink, Github, Star } from "lucide-react"
 import Image from "next/image"
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/autoplay"
+import { useState } from "react";
 
 const projects = [
  {
@@ -170,11 +177,15 @@ const projects = [
 ]
 
 export default function Projects() {
+  const [isBeginning, setIsBeginning] = useState(true);
+  const [isEnd, setIsEnd] = useState(false);
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section id="projects" className="py-24 relative">
+    <section id="projects" className="relative py-6">
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           ref={ref}
@@ -194,14 +205,97 @@ export default function Projects() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {projects.map((project, index) => (
-              <motion.div
+             {/* Swiper Carousel Container */}
+          <div className="relative w-full h-full group/carousel">
+            
+            <button
+              ref={prevRef}
+               className={`absolute left-1 md:left-2 top-1/2 -translate-y-1/2 bg-white border border-neutral-200 p-1.5 md:p-2 rounded-full z-20 shadow-md active:scale-95 text-neutral-700 transition-opacity duration-200 hover:bg-neutral-50 ${
+                 isBeginning ? "opacity-0 pointer-events-none" : "opacity-100"
+               }`}
+            >
+              <ChevronLeft size={16} />
+            </button>
+            <button
+              ref={nextRef}
+               className={`absolute right-1 md:right-2 top-1/2 -translate-y-1/2 bg-white border border-neutral-200 p-1.5 md:p-2 rounded-full z-20 shadow-md active:scale-95 text-neutral-700 transition-opacity duration-200 hover:bg-neutral-50 ${
+               isEnd ? "opacity-0 pointer-events-none" : "opacity-100"
+              }`}
+            >
+              <ChevronRight size={16} />
+            </button>
+
+            <Swiper
+              modules={[Navigation, Autoplay, A11y]}
+              speed={600}
+              slidesPerGroup={1}
+              watchOverflow={true}
+              grabCursor={true}
+              autoplay={{
+                delay: 3500,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+              }}
+              navigation={{
+                prevEl: prevRef.current,
+                nextEl: nextRef.current,
+              }}
+              onInit={(swiper) => {
+                // Link custom elements inside Swiper's internal navigation parameters
+                swiper.params.navigation.prevEl = prevRef.current;
+                swiper.params.navigation.nextEl = nextRef.current;
+                swiper.navigation.init();
+                swiper.navigation.update();
+                
+                setIsBeginning(swiper.isBeginning);
+                setIsEnd(swiper.isEnd);
+              }}
+              onSlideChange={(swiper) => {
+                setIsBeginning(swiper.isBeginning);
+                setIsEnd(swiper.isEnd);
+              }}
+             breakpoints={{
+  320: {
+    slidesPerView: 1,
+    spaceBetween: 10,
+  },
+  480: {
+    slidesPerView: 1,
+    spaceBetween: 12,
+  },
+  640: {
+    slidesPerView: 2,
+    spaceBetween: 14,
+  },
+  768: {
+    slidesPerView: 2,
+    spaceBetween: 12,
+  },
+  1024: {
+    slidesPerView: 2,
+    spaceBetween: 14,
+  },
+  1280: {
+    slidesPerView: 3,
+    spaceBetween: 16,
+  },
+}}
+              className="py-2"
+            >
+              
+                {projects.map((project, index) => (
+
+                  <SwiperSlide
+                    key={index}
+                     className="h-auto"
+
+                  >
+                    <motion.div
                 key={project.title}
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group relative rounded-2xl glass noise overflow-hidden hover:glow-primary transition-all duration-500"
+                className="group relative flex h-180 flex-col rounded-2xl glass noise hover:glow-primary transition-all duration-500 shadow-[0_2px_8px_rgba(0,0,0,0.02)] hover:shadow-[0_6px_18px_rgba(243,164,123,0.10)]"
               >
                 {/* Featured badge */}
                 {project.featured && (
@@ -219,20 +313,20 @@ export default function Projects() {
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
+               
                 </div>
 
                 {/* Content */}
-                <div className="p-6 pt-2">
+                <div className="p-6 pt-2 flex flex-col flex-1">
                   <h3 className="text-xl font-bold mb-2 group-hover:text-gradient transition-all">
                     {project.title}
                   </h3>
-                  <p className="text-sm text-muted-foreground mb-4 line-clamp-2">
+                  <p className="text-sm text-muted-foreground mb-4">
                     {project.description}
                   </p>
 
                   {/* Problem/Solution */}
-                  <div className="space-y-2 mb-4">
+                  <div className="space-y-2 mb-4  mt-auto">
                     <p className="text-xs">
                       <span className="text-primary font-semibold">Problem:</span>{" "}
                       <span className="text-muted-foreground">{project.problem}</span>
@@ -261,7 +355,7 @@ export default function Projects() {
                   </div>
 
                   {/* Links */}
-                  <div className="flex gap-3">
+                  <div className="flex gap-3 mt-auto">
                     <a
                       href={project.liveUrl}
                       target="_blank"
@@ -286,8 +380,11 @@ export default function Projects() {
                 {/* Gradient border on hover */}
                 <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 gradient-border pointer-events-none" />
               </motion.div>
-            ))}
-          </div>
+                  </SwiperSlide>
+                   
+                ))}
+            </Swiper>
+            </div>
         </motion.div>
       </div>
     </section>
