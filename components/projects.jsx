@@ -6,72 +6,167 @@ import { ExternalLink, Github, Star } from "lucide-react"
 import Image from "next/image"
 
 const projects = [
+ {
+  title: "Azeem Shah - Luxury Hospitality Portfolio",
+  description:
+    "A high-end corporate portfolio website crafted for an international hospitality strategist, featuring luxury branding, global business presence, professional achievements, and premium user experience.",
+  problem:
+    "Traditional business profiles failed to effectively communicate Azeem Shah's international hospitality expertise, leadership journey, and multiple business ventures in a visually compelling way.",
+  solution:
+    "Built a modern luxury portfolio with immersive visuals, business showcase, interactive global experience section, expertise highlights, testimonials, and strategic call-to-actions to strengthen personal branding and generate consultation opportunities.",
+  image: "/azeem-shah.jpg",
+ tech: [
+  "React",
+  "Vite",
+  "JavaScript",
+  "Tailwind CSS",
+  "React Router",
+  "Framer Motion",
+  "React Hook Form",
+  "React Query",
+  "Zod",
+  "Recharts",
+],
+  liveUrl: "https://azeemshah.com",
+  githubUrl: "https://github.com/Mahii-11/azeem-shah",
+  featured: true
+},
+ {
+  title: "Spotless - Commercial Cleaning Services",
+  description:
+    "A modern corporate website developed for a professional cleaning company, showcasing commercial cleaning services, COVID-19 sanitization, healthcare cleaning solutions, company information, and customer engagement through a clean and responsive interface.",
+  problem:
+    "The company needed a professional online platform to present its cleaning services, build customer trust, and make it easier for businesses to explore solutions and request cleaning services.",
+  solution:
+    "Developed a responsive corporate website with dedicated service sections, company highlights, trust-building content, contact information, and clear call-to-actions to improve online visibility and customer engagement.",
+  image: "/spotless.png",
+  tech: [
+    "React",
+    "Vite",
+    "JavaScript",
+    "Tailwind CSS",
+    "React Router",
+    "Responsive Design"
+  ],
+  liveUrl: "https://spotlessbd.com/",
+  githubUrl: "",
+  featured: false
+},
   {
-    title: "CloudDash Analytics",
-    description: "A real-time analytics dashboard for SaaS businesses. Built with React and D3.js to visualize complex data sets with interactive charts and customizable widgets.",
-    problem: "Businesses struggled to understand their data across multiple sources.",
-    solution: "Created unified dashboard with real-time sync, custom alerts, and exportable reports.",
-    image: "/project-1.png",
-    tech: ["React", "TypeScript", "D3.js", "TailwindCSS", "WebSocket"],
-    liveUrl: "https://clouddash.demo.com",
-    githubUrl: "https://github.com/alexchen/clouddash",
-    featured: true
-  },
+  title: "BanglaTech Solution - Technology Company Website",
+  description:
+    "A modern corporate website developed for a software and technology company, showcasing digital services, completed projects, company expertise, and business solutions through a clean, responsive, and engaging user experience.",
+
+  problem:
+    "The company required a professional online presence to effectively showcase its software development services, completed projects, and technical expertise while building credibility and generating new business opportunities.",
+
+  solution:
+    "Designed and developed a fully responsive corporate website with service showcases, project portfolio, company overview, smooth animations, intuitive navigation, and strategic call-to-actions to strengthen the company's digital presence and improve client engagement.",
+
+  image: "/banglatech-solution.png",
+
+  tech: [
+    "React",
+    "Vite",
+    "JavaScript",
+    "Tailwind CSS",
+    "React Router",
+    "Framer Motion",
+    "TanStack Query",
+    "React Hook Form",
+    "Swiper.js",
+    "Lenis"
+  ],
+
+  liveUrl: "https://banglatechsolutionit.com/",
+  githubUrl: "",
+  featured: true
+},
   {
-    title: "ShopFlow E-commerce",
-    description: "Full-featured e-commerce platform with cart management, payment processing, and inventory tracking. Optimized for conversion with A/B tested checkout flows.",
-    problem: "Client's existing store had 70% cart abandonment rate.",
-    solution: "Redesigned checkout flow reducing abandonment to 35%, increasing revenue by 50%.",
-    image: "/project-2.png",
-    tech: ["Next.js", "Stripe", "Prisma", "PostgreSQL", "Vercel"],
-    liveUrl: "https://shopflow.demo.com",
-    githubUrl: "https://github.com/alexchen/shopflow",
-    featured: true
-  },
+  title: "Dr. Golam Rabbani - Executive Personal Portfolio",
+  description:
+    "A modern executive portfolio website developed for a public policy expert, showcasing leadership experience, research publications, policy initiatives, latest articles, achievements, and professional engagement through a clean and responsive interface.",
+
+  problem:
+    "The client needed a professional digital platform to present his public policy expertise, research contributions, leadership initiatives, and academic publications while strengthening his personal brand and increasing engagement with students, researchers, policymakers, and the public.",
+
+  solution:
+    "Designed and developed a responsive executive portfolio website featuring a professional profile, research publications, latest blogs, policy initiatives, achievements, event highlights, and intuitive navigation to establish a strong digital presence and improve audience engagement.",
+
+  image: "/golam-rabbani.png",
+
+  tech: [
+    "React",
+    "Vite",
+    "JavaScript",
+    "Tailwind CSS",
+    "React Router",
+    "Framer Motion",
+    "Swiper.js"
+  ],
+
+  liveUrl: "https://rabbani.bdtechdemo.online/",
+  githubUrl: "",
+  featured: true
+},
+ {
+  title: "Touhid Bhuiyan - AI & Cybersecurity Portfolio",
+
+  description:
+    "A modern executive portfolio website developed for an Artificial Intelligence and Cybersecurity professional, showcasing expertise, research, publications, media appearances, industry insights, and professional services through a premium and responsive user experience.",
+
+  problem:
+    "The client needed a professional digital platform to establish a strong personal brand, showcase expertise in Artificial Intelligence, Cybersecurity, and Digital Trust, publish research and insights, and connect with organizations seeking strategic consulting and training.",
+
+  solution:
+    "Designed and developed a premium responsive portfolio website featuring professional branding, service offerings, research highlights, media gallery, industry insights, achievements, and clear call-to-actions to enhance credibility, strengthen digital presence, and increase professional engagement.",
+
+  image: "/touhid-bhuiyan.png",
+
+  tech: [
+    "React",
+    "Vite",
+    "JavaScript",
+    "Tailwind CSS",
+    "React Router",
+    "Framer Motion",
+    "React Query",
+    "React Hook Form",
+    "Swiper.js",
+    "Recharts"
+  ],
+
+  liveUrl: "https://touhidbhuiyan.com/",
+  githubUrl: "",
+  featured: true
+},
   {
-    title: "TeamSync Collaboration",
-    description: "Real-time collaboration tool for remote teams featuring video calls, shared documents, and project management with intuitive drag-and-drop interfaces.",
-    problem: "Remote teams needed a unified platform for async and sync communication.",
-    solution: "Built integrated workspace with 99.9% uptime and sub-100ms latency.",
-    image: "/project-3.png",
-    tech: ["React", "WebRTC", "Socket.io", "Redis", "AWS"],
-    liveUrl: "https://teamsync.demo.com",
-    githubUrl: "https://github.com/alexchen/teamsync",
-    featured: false
-  },
-  {
-    title: "HealthTrack Pro",
-    description: "Healthcare appointment scheduling system with patient portal, doctor availability management, and automated reminders. HIPAA compliant architecture.",
-    problem: "Clinic was losing patients due to scheduling friction and no-shows.",
-    solution: "Automated system reduced no-shows by 60% and improved booking efficiency.",
-    image: "/project-4.png",
-    tech: ["Next.js", "TypeScript", "Twilio", "PostgreSQL", "Docker"],
-    liveUrl: "https://healthtrack.demo.com",
-    githubUrl: "https://github.com/alexchen/healthtrack",
-    featured: false
-  },
-  {
-    title: "FinanceHub Dashboard",
-    description: "Personal finance management app with expense tracking, budget planning, and investment portfolio visualization. Bank-grade security with 2FA.",
-    problem: "Users wanted a simple way to track spending across multiple accounts.",
-    solution: "Unified dashboard with AI-powered insights and automated categorization.",
-    image: "/project-5.png",
-    tech: ["React", "Node.js", "Plaid API", "MongoDB", "Chart.js"],
-    liveUrl: "https://financehub.demo.com",
-    githubUrl: "https://github.com/alexchen/financehub",
-    featured: true
-  },
-  {
-    title: "ContentCraft CMS",
-    description: "Headless CMS with visual editor, multi-language support, and API-first architecture. Built for marketing teams who need speed without developer dependency.",
-    problem: "Marketing team bottlenecked by developer availability for content updates.",
-    solution: "No-code editor with instant publishing and version control.",
-    image: "/project-6.png",
-    tech: ["Next.js", "GraphQL", "Sanity", "Vercel Edge", "TypeScript"],
-    liveUrl: "https://contentcraft.demo.com",
-    githubUrl: "https://github.com/alexchen/contentcraft",
-    featured: false
-  }
+  title: "Amar - Circle Internet Service Website",
+
+  description:
+    "A modern corporate website developed for an internet service provider (ISP), showcasing broadband plans, network coverage, company services, customer benefits, and online inquiries through a clean and responsive user experience.",
+
+  problem:
+    "The internet service provider needed a modern website that could clearly present its broadband packages, service coverage, and customer support while simplifying the process for potential customers to compare plans and choose the right internet solution.",
+
+  solution:
+    "Designed and developed a responsive ISP website featuring internet package comparisons, service highlights, company information, FAQs, contact forms, and conversion-focused call-to-actions to improve customer experience and increase service inquiries.",
+
+  image: "/amarcircle.png",
+
+  tech: [
+    "React",
+    "Vite",
+    "JavaScript",
+    "Tailwind CSS",
+    "React Router",
+    "Framer Motion"
+  ],
+
+  liveUrl: "https://amarcircle.net/",
+  githubUrl: "",
+  featured: false
+}
 ]
 
 export default function Projects() {
@@ -90,11 +185,12 @@ export default function Projects() {
           <div className="text-center mb-16">
             <span className="text-primary font-mono text-sm">// PROJECTS</span>
             <h2 className="text-3xl md:text-4xl font-bold mt-2">
-              Featured Work
+              Professional Portfolio & Business Websites
             </h2>
             <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-              A selection of projects I&apos;ve built for clients and personal exploration. 
-              Each one taught me something new.
+              From executive portfolios to corporate websites, these projects focus on
+              creating impactful digital experiences that help businesses and professionals
+              grow their online presence.
             </p>
           </div>
 

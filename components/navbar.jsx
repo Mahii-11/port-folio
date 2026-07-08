@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X } from "lucide-react"
+import ThemeToggle from "@/components/theme-toggle"
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -36,10 +37,17 @@ export default function Navbar() {
       >
         <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="text-xl font-bold">
-           MAHI
-           {/*<span className="text-primary"></span>*/}
-          </a>
+         <a href="/" className="flex shrink-0 items-center gap-3">
+                      <img src="/mahi.png" alt= "MAHi Logo"
+                      className="relative w-13 h-13 rounded-full border-2 border-indigo-600 object-cover transition-transform duration-300 group-hover:scale-105" />
+          
+                    <div className="leading-tight">
+                      <p className="text-[16px] font-normal text-black">
+                        MAHI
+                      </p>
+        
+                    </div>
+                  </a>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
@@ -53,6 +61,7 @@ export default function Navbar() {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
               </a>
             ))}
+            <ThemeToggle />
             <a
               href="#contact"
               className="px-4 py-2 bg-primary text-primary-foreground rounded-lg text-sm font-medium hover:scale-105 transition-transform"
@@ -62,13 +71,16 @@ export default function Navbar() {
           </nav>
 
           {/* Mobile menu button */}
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 text-foreground"
-            aria-label="Toggle menu"
-          >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          <div className="md:hidden flex items-center gap-2">
+            <ThemeToggle />
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="p-2 text-foreground"
+              aria-label="Toggle menu"
+            >
+              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
       </motion.header>
 
