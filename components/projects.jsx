@@ -46,7 +46,7 @@ const projects = [
     "The company needed a professional online platform to present its cleaning services, build customer trust, and make it easier for businesses to explore solutions and request cleaning services.",
   solution:
     "Developed a responsive corporate website with dedicated service sections, company highlights, trust-building content, contact information, and clear call-to-actions to improve online visibility and customer engagement.",
-  image: "/spotless.png",
+  image: "/spotlessbd.png",
   tech: [
     "React",
     "Vite",
@@ -295,7 +295,7 @@ export default function Projects() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group relative flex h-180 flex-col rounded-2xl glass noise hover:glow-primary transition-all duration-500 shadow-[0_2px_8px_rgba(0,0,0,0.02)] hover:shadow-[0_6px_18px_rgba(243,164,123,0.10)]"
+                className="group relative flex sm:h-210 h-full  flex-col rounded-2xl glass noise hover:glow-primary transition-all duration-500 shadow-[0_2px_8px_rgba(0,0,0,0.02)] hover:shadow-[0_6px_18px_rgba(243,164,123,0.10)]"
               >
                 {/* Featured badge */}
                 {project.featured && (
@@ -306,14 +306,15 @@ export default function Projects() {
                 )}
 
                 {/* Image */}
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative w-full aspect-[4/3] md:aspect-[16/9] overflow-hidden rounded-t-2xl">
                   <Image
                     src={project.image}
                     alt={project.title}
                     fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="object-cover object-center transition-transform duration-500 group-hover:scale-110"
+                    loading="lazy"
                   />
-               
+
                 </div>
 
                 {/* Content */}
