@@ -4,10 +4,9 @@ import { motion } from "framer-motion"
 import { Github, Linkedin, Twitter, Mail, Heart } from "lucide-react"
 
 const socialLinks = [
-  { icon: Github, href: "https://github.com/alexchen", label: "GitHub" },
-  { icon: Linkedin, href: "https://linkedin.com/in/alexchen", label: "LinkedIn" },
-  { icon: Twitter, href: "https://twitter.com/alexchen", label: "Twitter" },
-  { icon: Mail, href: "mailto:alex@example.com", label: "Email" }
+  { icon: Github, href: "https://github.com/Mahii-11", label: "GitHub" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/adib-mahi-99386a417/", label: "LinkedIn" },
+  { icon: Mail, href: "https://mail.google.com/mail/?view=cm&fs=1&to=adibmahi14@gmail.com", label: "Email" }
 ]
 
 const navLinks = [
@@ -36,7 +35,7 @@ export default function Footer() {
              MAHI
             </a>
             <p className="text-sm text-muted-foreground mt-1">
-              Senior Frontend Developer
+             Frontend Developer
             </p>
           </motion.div>
 
@@ -91,9 +90,9 @@ export default function Footer() {
           className="mt-12 pt-8 border-t border-border text-center"
         >
           <p className="text-sm text-muted-foreground flex items-center justify-center gap-1">
-            &copy; {currentYear} Alex Chen. Built with
+            &copy; {currentYear} MA AHI. Built with
             <Heart className="w-4 h-4 text-primary fill-primary" />
-            using Next.js & Tailwind CSS
+            using React.js & Tailwind CSS
           </p>
         </motion.div>
       </div>

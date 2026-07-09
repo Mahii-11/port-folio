@@ -4,7 +4,9 @@ import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
 import { Quote, Star } from "lucide-react"
 
-const testimonials = [
+{/*
+  
+  const testimonials = [
   {
     name: "Sarah Mitchell",
     role: "CEO, TechStart Inc",
@@ -27,11 +29,12 @@ const testimonials = [
     rating: 5
   }
 ]
+  */}
 
 const stats = [
-  { value: "50+", label: "Projects Delivered" },
-  { value: "100%", label: "Client Satisfaction" },
-  { value: "5+", label: "Years Experience" },
+  { value: "8+", label: "Projects Completed" },
+  { value: "5+", label: "Ongoing Client Projects" },
+  { value: "100%", label: "Commitment" },
   { value: "24h", label: "Response Time" }
 ]
 
@@ -40,7 +43,7 @@ export default function Testimonials() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
   return (
-    <section id="testimonials" className="py-24 relative">
+    <section id="testimonials" className="py-20 relative">
       <div className="max-w-6xl mx-auto px-6">
         <motion.div
           ref={ref}
@@ -49,12 +52,13 @@ export default function Testimonials() {
           transition={{ duration: 0.6 }}
         >
           <div className="text-center mb-16">
-            <span className="text-primary font-mono text-sm">// TESTIMONIALS</span>
+            <span className="text-primary font-mono text-sm">// EXPERIENCE</span>
             <h2 className="text-3xl md:text-4xl font-bold mt-2">
-              What Clients Say
+              Professional Journey
+
             </h2>
             <p className="text-muted-foreground mt-4">
-              Real feedback from people I&apos;ve had the pleasure to work with
+              Building real-world solutions through ongoing client collaborations and continuous learning.
             </p>
           </div>
 
@@ -83,7 +87,7 @@ export default function Testimonials() {
             ))}
           </motion.div>
 
-          {/* Testimonial cards */}
+          {/* Testimonial cards 
           <div className="grid md:grid-cols-3 gap-6">
             {testimonials.map((testimonial, index) => (
               <motion.div
@@ -95,7 +99,7 @@ export default function Testimonials() {
               >
                 <Quote className="w-8 h-8 text-primary/30 mb-4" />
                 
-                {/* Rating */}
+            
                 <div className="flex gap-1 mb-4">
                   {Array.from({ length: testimonial.rating }).map((_, i) => (
                     <Star key={i} className="w-4 h-4 fill-primary text-primary" />
@@ -116,9 +120,13 @@ export default function Testimonials() {
                   </div>
                 </div>
               </motion.div>
+            
             ))}
+            
           </div>
+          */}
         </motion.div>
+        
       </div>
     </section>
   )

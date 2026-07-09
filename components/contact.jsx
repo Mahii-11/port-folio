@@ -23,7 +23,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-24 relative">
+    <section id="contact" className="-mt-10 relative">
       <div className="max-w-4xl mx-auto px-6">
         <motion.div
           ref={ref}
